@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Thông tin liên hệ • Lê Quốc Bình</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Trang thông tin cá nhân của Lê Quốc Bình (Kỹ thuật điều khiển và tự động hóa)." />
+</head>
+<body class="min-h-screen bg-slate-50 antialiased">
+  <main class="max-w-4xl mx-auto p-4 sm:p-8">
+    <!-- Header -->
+    <section class="flex items-center gap-4 mb-6">
+      <img id="avatar" src="1.jpg" alt="Avatar" class="w-20 h-20 rounded-2xl shadow"/>
+      <div>
+        <h1 class="text-2xl font-bold text-slate-900">Lê Quốc Bình</h1>
+        <p class="text-slate-600">Kỹ thuật điều khiển và tự động hóa</p>
+      </div>
+    </section>
+
+    <!-- Contact buttons -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+      <!-- Card số điện thoại -->
+      <div class="p-4 rounded-2xl shadow bg-white hover:shadow-md transition flex justify-between items-center col-span-1 sm:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2">
+        <!-- Vòng tròn nền + icon điện thoại -->
+        <div class="w-7 h-7 flex items-center justify-center rounded-full bg-green-600">
+          <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" 
+              alt="Phone" class="w-4 h-4 invert" />
+        </div>
+      </div>
+          <!-- Số điện thoại -->
+          <span class="text-sm text-slate-500">0344456449</span>
+        </div>
+        <div class="flex gap-2 flex-wrap">
+          <a href="tel:0344456449" class="px-3 py-1 rounded bg-green-600 text-white text-sm">Gọi</a>
+          <a href="sms:0344456449" class="px-3 py-1 rounded bg-slate-900 text-white text-sm">SMS</a>
+          <a href="https://zalo.me/0344456449" target="_blank" class="px-3 py-1 rounded bg-[#0068FF] text-white text-sm">Zalo</a>
+          <button onclick="copyText('0344456449')" class="px-3 py-1 rounded bg-slate-200 text-sm">Sao chép</button>
+        </div>
+      </div>
+
+      <!-- Facebook -->
+      <div class="p-4 rounded-2xl shadow bg-white hover:shadow-md transition flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <!-- Logo Facebook -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" 
+              alt="Facebook" class="w-5 h-5"/>
+          <!-- Link Facebook -->
+          <span class="text-sm text-slate-500">facebook.com/blbl.cuabig</span>
+        </div>
+        <div class="flex gap-2">
+          <a href="https://www.facebook.com/blbl.cuabig" target="_blank" 
+            class="px-3 py-1 rounded bg-[#1877F2] text-white text-sm font-semibold">Mở</a>
+          <button onclick="copyText('https://www.facebook.com/blbl.cuabig')" 
+            class="px-3 py-1 rounded bg-slate-200 text-sm">Sao chép</button>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="p-4 rounded-2xl shadow bg-white hover:shadow-md transition flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <img src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png" 
+              alt="Gmail" class="w-5 h-5"/>
+          <span class="text-sm text-slate-500">bql1907@gmail.com</span>
+        </div>
+        <div class="flex gap-2">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bql1907@gmail.com" target="_blank" 
+            class="px-3 py-1 rounded bg-slate-900 text-white text-sm">Mở</a>
+          <button onclick="copyText('bql1907@gmail.com')" 
+            class="px-3 py-1 rounded bg-slate-200 text-sm">Sao chép</button>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center text-xs text-slate-400 mt-8">
+      © <span id="year"></span> Lê Quốc Bình.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Đã sao chép: " + text);
+      });
+    }
+  </script>
+</body>
+</html>
