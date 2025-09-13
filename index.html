@@ -21,23 +21,48 @@
     <!-- Contact buttons -->
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
       <!-- Card số điện thoại -->
-      <div class="p-4 rounded-2xl shadow bg-white hover:shadow-md transition flex justify-between items-center col-span-1 sm:col-span-2">
-        <div class="flex items-center gap-2">
-          <div class="flex items-center gap-2">
-        <!-- Vòng tròn nền + icon điện thoại -->
-        <div class="w-7 h-7 flex items-center justify-center rounded-full bg-green-600">
-          <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" 
-              alt="Phone" class="w-4 h-4 invert" />
+<!-- Card số điện thoại (responsive + icon chuẩn màu) -->
+<div class="p-4 rounded-2xl shadow bg-white hover:shadow-md transition
+            flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+  <!-- Trái: icon tròn + số -->
+  <div class="flex items-center gap-2">
+    <!-- Vòng tròn xanh + icon phone trắng (SVG, không bị sai màu) -->
+          <div class="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 fill-white" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                      19.86 19.86 0 0 1-8.63-3.07
+                      19.5 19.5 0 0 1-6-6
+                      19.86 19.86 0 0 1-3.07-8.63
+                      A2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72
+                      c.12.81.31 1.6.57 2.36a2 2 0 0 1-.45 2.11L8.09 8.91
+                      a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45
+                      c.76.26 1.55.45 2.36.57A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <a href="tel:0344456449" class="text-sm text-slate-500 hover:underline">
+            0344456449
+          </a>
         </div>
-      </div>
-          <!-- Số điện thoại -->
-          <span class="text-sm text-slate-500">0344456449</span>
-        </div>
-        <div class="flex gap-2 flex-wrap">
-          <a href="tel:0344456449" class="px-3 py-1 rounded bg-green-600 text-white text-sm">Gọi</a>
-          <a href="sms:0344456449" class="px-3 py-1 rounded bg-slate-900 text-white text-sm">SMS</a>
-          <a href="https://zalo.me/0344456449" target="_blank" class="px-3 py-1 rounded bg-[#0068FF] text-white text-sm">Zalo</a>
-          <button onclick="copyText('0344456449')" class="px-3 py-1 rounded bg-slate-200 text-sm">Sao chép</button>
+
+        <!-- Phải: nhóm nút – mobile có thể xuống hàng; desktop giữ 1 hàng -->
+        <div class="flex flex-wrap sm:flex-nowrap gap-2">
+          <a href="tel:0344456449"
+            class="h-9 px-4 flex items-center justify-center rounded bg-green-600 text-white text-sm">
+            Gọi
+          </a>
+          <a href="sms:0344456449"
+            class="h-9 px-4 flex items-center justify-center rounded bg-slate-900 text-white text-sm">
+            SMS
+          </a>
+          <a href="https://zalo.me/0344456449" target="_blank"
+            class="h-9 px-4 flex items-center justify-center rounded bg-[#0068FF] text-white text-sm">
+            Zalo
+          </a>
+          <button onclick="copyText('0344456449')"
+            class="h-9 px-4 flex items-center justify-center rounded bg-slate-200 text-sm">
+            Sao chép
+          </button>
         </div>
       </div>
 
